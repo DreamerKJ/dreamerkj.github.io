@@ -1,0 +1,67 @@
+:root {
+    --bgcolor: #a84b79;
+    --fgcolor: #3B1C32;
+}
+body {
+    background-color: black;
+}
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--bgcolor);
+    margin: 1em;
+    background-color:var(--fgcolor);
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 1px;
+    overflow: hidden;
+    background-color: var(--fgcolor);
+    position: relative;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    padding: 7px 10px 7px 10px;
+  }
+  
+  li a:hover {
+    background-color: #6A1E55;
+  }
+  
+  .active {
+    background-color: #39343c;
+  }
+  
+  a:link {
+    color: var(--bgcolor);
+  }
+
+  .framecollection {
+    display:block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    border: var(--fgcolor) 10px double;
+  }
+
+  .frame {
+    width: 200px;
+    margin: 10px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .frame img {
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    border: 5px solid var(--bgcolor);
+  }
