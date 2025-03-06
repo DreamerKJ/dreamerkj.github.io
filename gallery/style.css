@@ -25,6 +25,7 @@ html {
     border: 7px black double;
     display: inline-block;
     position: relative;
+    transition: transform 1s;
 }
 
 .ticket:hover {
