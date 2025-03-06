@@ -6,32 +6,37 @@ html {
     background-color: var(--fgcolor);
 }
 
-.ticketcollection {
-    display: block;
-    /*overflow-x: scroll;
-    overflow-y: hidden;*/
-    height: 210px;
-    text-align: center;
-    border: var(--fgcolor) 10px double;
-}
 
 .ticket {
     width: 400px;
     height: 150px;
     text-align: left;
-    background-color: rgb(210, 212, 195);
+    background-color: rgb(208, 208, 208);
     padding: 5px;
-    margin: 10px;
+    margin: -15px;
     border: 7px black double;
     display: inline-block;
     position: relative;
-    transition: transform 1s;
+    transform: matrix(0.7, 0.1, 0.9, 0.9, 0, 0);
+    transition: margin 0.5s, transform 1.5s, color 1.5s, background-color 1.5s;
 }
 
 .ticket:hover {
-    transform: matrix(0.7, 0, 0.9, 0.9, 0, 0);
+    margin: 30px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    background-color: rgb(25, 25, 25);
+    color: rgb(210, 212, 195);
 }
-  
+
+.ticketcollection {
+    display: block;
+    margin: 0 33% 0 33%;
+    height: 210px;
+    width: 33%;
+    text-align: center;
+    border: var(--fgcolor) 10px double;
+}
+
 .ticket img {
     float: left;
     margin: 0px;
@@ -44,6 +49,7 @@ html {
     text-align: center;
     margin: 10px;
     margin-top: 20px;
+    transition: margin 1.5s, margin-top 1.5s;
 }
 
 .ticket p{
@@ -51,6 +57,7 @@ html {
     margin: -5px;
     margin-top: 30px;
     margin-right: 10px;
+    transition: margin 1.5s, margin-top 1.5s;
 }
 
 .subtitle{
