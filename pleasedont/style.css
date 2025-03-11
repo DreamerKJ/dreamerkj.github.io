@@ -21,6 +21,7 @@ body {
     }
     .container p {
         color: rgb(255, 175, 175);
+        font-variant: small-caps;
     }
 }
   
