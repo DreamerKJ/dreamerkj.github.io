@@ -1,23 +1,151 @@
 html {
-    background-color: black;
-}
-
-.bgimg {
-    background-image: url("41broadway.jpg");
-    height: 500px;
+    background-image: url("background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.playbillrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.playbill {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleblock {
+    background-color: rgb(235, 173, 3);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    width: 400px;
+    border: 6.4px black solid;
+    border-bottom: 0px;
+}
+
+.titleblock h1 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    padding: 4px;
+    margin: 0px;
+    letter-spacing: 8px;
+    color: black;
+}
+
+.titleblock p {
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 24px;
+}
+
+.contentblock {
+    color: white;   
+    background-color: black;
+    width: 400px;
+    height: 480px;
+    margin: 0px;
+    padding: 0px;
+    border: 6.4px black solid;
+    border-top: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentblock img {
+    padding: 0px;
+    margin: 0px;
+    width: 80%;
+    object-fit: cover;
+    transition: filter 0.5s;
     position: relative;
 }
 
-.hero-text {
-    text-align: center;
+.contentblock p{
     position: absolute;
+    width: 300px;
+    text-align: center;
+    background-color: rgb(235, 173, 3);
+    padding: 10px;
+    color: black;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-  }
+    opacity: 0;
+    transition: opacity 0.5s;
+}
 
-  .gel
+.contentblock:hover{
+    img {
+        filter: blur(10px);
+    }
+    p {
+        opacity: 100;
+    }
+}
+
+.menublock {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menublock ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: none;
+    position: relative;
+}
+
+.menublock li {
+    float: left;
+}
+
+.menublock li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    display: block;
+    background-color: rgb(218, 218, 218);
+    padding: 8px 8px 8px 8px;
+    border: 3.4px rgb(0, 0, 0) solid;
+    margin: 0px 5px 0px 5px;
+    transition: background-color 1.5s
+}
+
+.menublock li a:hover {
+    background-color: rgb(235, 173, 3);
+    padding: 5px 5px 5px 5px;
+    border: 6.4px black solid;
+}
+
+@media screen and (max-width: 1360px) {
+    .playbillrow {
+        flex-direction: column;
+    }  
+
+    .contentblock:hover{
+        img {
+            filter: blur(10px);
+        }
+        p {
+            /* Can't figure out how to make this thing work when in column mode */
+            /* So opted to turn off, and just be a link then */
+            opacity: 0;
+        }
+    }
+}
+  

@@ -1,0 +1,49 @@
+html {
+    background-color: rgb(235, 173, 3);
+}
+
+.map {
+    display: flex;
+    width: 600px;
+    height: 650px;
+    flex-direction: column;
+    align-items: center;
+    
+    text-align: center; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    background-color: white;
+    padding: 0px 2px 5px 2px;   
+    border: 5px black solid;
+}
+
+.street {
+    height: 4.72%;
+    width: 100%;
+
+    margin: 5px; 
+    padding: 0px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.block {
+    width: 33%;
+    height: 100%;
+    margin: 0px 2px 0px 2px;
+    border: 3px gray solid;
+}
+
+.block img {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    transition: transform 1.5s;
+}
+
+.block img:hover {
+    opacity: 50%;
+}

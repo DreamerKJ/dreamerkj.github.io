@@ -57,7 +57,7 @@ a:link {
 }
 
 .frame {
-  width: z00px;
+  width: 100px;
   content: 100%;
   margin: 10pax;
   display: inline-block;
