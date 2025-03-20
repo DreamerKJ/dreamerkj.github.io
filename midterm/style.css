@@ -3,6 +3,7 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .playbillrow {
@@ -18,6 +19,83 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.smallplaybillrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.smallplaybill {
+    padding: 4px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+}
+
+.smalltitleblock {
+    background-color: rgb(235, 173, 3);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100px;
+    border: 1.6px black solid;
+    border-bottom: 0px;
+}
+
+.smalltitleblock h1 {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 1px;
+    margin: 0px;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.smalltitleblock p {
+    font-size: 4px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 6px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.smallcontentblock {
+    color: white;   
+    background-color: black;
+    width: 100px;
+    height: 120px;
+    margin: 0px;
+    padding: 0px;
+    border: 1.6px black solid;
+    border-top: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smallcontentblock img {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    transition: filter 0.5s;
+    position: relative;
+}
+
+.smallplaybill:hover{
+    transform: scale(1.1, 1.1);
 }
 
 .titleblock {
@@ -49,11 +127,11 @@ html {
 .contentblock {
     color: white;   
     background-color: black;
-    width: 400px;
+    width: 402px;
     height: 480px;
     margin: 0px;
     padding: 0px;
-    border: 6.4px black solid;
+    border: 6px black solid;
     border-top: 0px;
 
     display: flex;
@@ -64,8 +142,8 @@ html {
 .contentblock img {
     padding: 0px;
     margin: 0px;
-    width: 80%;
-    object-fit: cover;
+    width: 100%;
+    object-fit: fill;
     transition: filter 0.5s;
     position: relative;
 }
@@ -82,6 +160,25 @@ html {
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.5s;
+}
+
+.yellowbox {
+    width: 420px;
+    text-align: center;
+    background-color: rgb(235, 173, 3);
+    border: 6.4px black solid;
+    padding: 10px;
+    margin-left: 100px;
+    color: black; 
+}
+
+.yellowbox a {
+    text-decoration: none;
+}
+
+.yellowbox a:hover {
+    color: red;
+    text-decoration: none;
 }
 
 .contentblock:hover{
@@ -137,13 +234,16 @@ html {
         flex-direction: column;
     }  
 
+    .yellowbox {
+        margin-left: 0px;
+    }
+
     .contentblock:hover{
         img {
             filter: blur(10px);
         }
         p {
-            /* Can't figure out how to make this thing work when in column mode */
-            /* So opted to turn off, and just be a link then */
+            /* the text boxes turn off when vertical mode */
             opacity: 0;
         }
     }
