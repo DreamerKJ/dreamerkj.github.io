@@ -45,10 +45,18 @@
     
     <p style="text-align: center; background-color: rgb(235, 173, 3); border: 2px black solid; position: sticky; top: 10px; z-index: 1;">
         <a href="#broadway" style="color: black; font-weight: 600;">Broadway</a>
+        <button style="position: absolute; left: 0px; height: 18px;"
+            onclick="document.getElementById('broadwayrow').style.display='none'"
+        >
+        </button>
+        <button style="position: absolute; right: 0px; height: 18px;"
+            onclick="document.getElementById('broadwayrow').style.display='flex'"
+        >
+        </button>
     </p>
     <br>
 
-    <div class="smallplaybillrow">
+    <div class="smallplaybillrow" id="broadwayrow" style="display:none">
         <a href="#juliet">
             <div class="watch smallplaybill">
                 <div class="smalltitleblock">
@@ -516,10 +524,20 @@
     <br id="offbroadway">
     <p style="text-align: center; background-color: rgb(235, 173, 3); border: 2px black solid; position: sticky; top: 30px; z-index: 1;">
         <a href="#offbroadway" style="color: black; font-weight: 600;">Off-Broadway</a>
+        <button style="position: absolute; left: 0px; height: 18px;"
+            onclick="document.getElementById('offbroadwayrow').style.display='none'"
+        >
+        </button>
+        <button style="position: absolute; right: 0px; height: 18px;"
+            onclick="document.getElementById('offbroadwayrow').style.display='flex'"
+        >
+        </button>
     </p>
     <br>
 
-    <div class="smallplaybillrow">
+    
+
+    <div class="smallplaybillrow" id="offbroadwayrow" style="display:none">
         <a href="#mother">
             <div class="watched smallplaybill">
                 <div class="smalltitleblock">
@@ -632,10 +650,19 @@
     <br id="othershows">
     <p style="text-align: center; background-color: rgb(235, 173, 3); border: 2px black solid; position: sticky; top: 50px; z-index: 1;">
         <a href="#othershows" style="color: black; font-weight: 600;">Other Shows</a>
+        <button style="position: absolute; left: 0px; height: 18px;"
+            onclick="document.getElementById('etcshowrow').style.display='none'"
+        >
+        </button>
+        <button style="position: absolute; right: 0px; height: 18px;"
+            onclick="document.getElementById('etcshowrow').style.display='flex'"
+        >
+        </button>
     </p>
     <br>
+    
 
-    <div class="smallplaybillrow">
+    <div class="smallplaybillrow" id="etcshowrow" style="display:none">
         <a href="#daily">
             <div class="watched smallplaybill">
                 <div style="background-color: rgb(146, 146, 255);" class="smalltitleblock">
