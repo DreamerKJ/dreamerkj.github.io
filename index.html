@@ -18,5 +18,38 @@
         <a href="webdev/">web dev</a> --- <a href="advcc">adv cc</a> 
     </p>
 
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="text-align:center;">
+        <p class = "center">Leave Your Contact</p>
+        <label style="color:white">First Name: </label>
+        <input type="text" id="firstname" placeholder="Your name..">
+        <br>
+        <label style="color:white">Last Name: </label>
+        <input type="text" id="lastname" placeholder="Your name..">
+        <br>
+        <label style="color:white">Email: </label>
+        <input type="text" id="email" placeholder="Your email..">
+        <br>
+        <input type="text" id="content" style="height:50px;" placeholder="A Brief Message..">
+        <br>
+        <button id = "contactsubmit">Leave</button>
+    </div>
+
+    <script>
+        function resetForm() {
+            document.getElementById("firstname").value = "";
+            document.getElementById("lastname").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("content").value = "";
+            window.alert("We definitely got your contact. Yep. Definitely did that.")
+        }
+        
+        const contactbutton = document.getElementById("contactsubmit");
+        contactbutton.addEventListener("click", resetForm);
+    </script>
 </body>
 </html>
