@@ -38,6 +38,7 @@ function nextBg() {
 }
 
 const header = document.getElementById("header");
+const footer = document.getElementById("footer");
 
 function hoverMouse(event) {
     if(mode == 'pen') {
@@ -45,10 +46,13 @@ function hoverMouse(event) {
         event.target.style.backgroundImage = nextBg();
     } else if (mode == 'erase') {
         event.target.style.backgroundImage = null;
+        header.style.backgroundImage = null;
+        footer.style.backgroundImage = null;
         event.target.style.backgroundColor = white;
     } else if (mode == 'inspect') {
         document.body.style.backgroundImage = event.target.style.backgroundImage;
         header.style.backgroundImage = event.target.style.backgroundImage;
+        footer.style.backgroundImage = event.target.style.backgroundImage;
     }
 }
 
@@ -116,6 +120,8 @@ function patternRandom() {
 
 function clearButton() {
     document.body.style.backgroundImage = null;
+    header.style.backgroundImage = null;
+    footer.style.backgroundImage = null;
     for(const node of container.childNodes) {
         node.style.backgroundImage = null;
     }
