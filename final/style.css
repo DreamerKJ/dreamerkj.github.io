@@ -111,7 +111,7 @@ input:not(.colorbutton):hover {
 }
 
 .colorbutton {
-    border: 5px gray solid;
+    border: 5px rgba(255,255,255,0.8) solid;
     margin-top: 5px;
     width: 6vw;
     height: 13px;
