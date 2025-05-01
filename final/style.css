@@ -1,0 +1,125 @@
+body {
+    background-repeat: repeat;
+    background-size: 10%;
+    background-color: black;
+    color: white;
+}
+
+#buttontray, #buttontray2 {
+    display: flex;
+    justify-content: space-evenly
+}
+
+@media (orientation:landscape) {
+    #outer {
+        display: flex;
+        height: 94vh;
+        justify-content: center;
+        align-items: center;
+    }
+    #container {
+        width: 76vh;
+        height: 60vh;
+        border: 2vh gray solid;
+        display: grid;
+        grid-template-columns: repeat(19, 4vh);
+        grid-auto-rows: 6vh;
+    }
+    #header {
+        position: absolute;
+        height: 8vh;
+        margin: 0;
+        text-align: center;
+        font-size: 8vh
+    }
+    #bottomtext {
+        position: absolute;
+        height: 8vh;
+        margin: 0;
+        text-align: center;
+        font-size: 8vh
+    }
+    #buttontray {
+        margin-top: -13vh;
+        margin-bottom: 4px;
+        text-align: center;
+    }
+}
+
+@media (orientation:portrait) {
+    #outer {
+        display: flex;
+        height: 94vw;
+        justify-content: center;
+        align-items: center;
+    }
+    #container {
+        width: 76vw;
+        height: 60vw;
+        border: 2vw gray solid;
+        display: grid;
+        grid-template-columns: repeat(19, 4vw);
+        grid-auto-rows: 6vw;
+    }
+    #header {
+        position: absolute;
+        height: 8vw;
+        margin: 0;
+        text-align: center;
+        font-size: 8vw;
+    }
+    #bottomtext {
+        position: absolute;
+        height: 8vw;
+        margin: 0;
+        font-size: 8vw
+    }
+    #buttontray {
+        margin-top: -13vw;
+        margin-bottom: 4px;
+        text-align: center;
+    }
+}
+
+.tile {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+}
+
+input {
+    border: 4px rgb(181, 181, 181) solid;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(93, 93, 93);
+    transition: height 0.5s, width 0.5s, margin 0.5s;
+}
+
+input:not(.colorbutton):hover {
+    height: 55px;
+    width: 55px;
+    margin: -2.5px;
+}
+
+.activebutton {
+    border: 4px rgb(72, 72, 72) solid;
+    background-color: rgb(0, 0, 0);
+}
+
+#colortray {
+    text-align: center;
+}
+
+.colorbutton {
+    border: 5px gray solid;
+    margin-top: 5px;
+    width: 6vw;
+    height: 13px;
+}
+
+.activecolorbutton {
+    border: 5px rgba(255,255,255,0.2) solid;
+}
+
+#header { 
+}
