@@ -8,7 +8,7 @@ for(let i=1 ; i<= 190 ; i++) {
     activeList[i-1] = i;
 }
 
-let colors = [
+/*let colors = [
     "rgb(196, 30, 58)",
     "rgb(226, 135, 30)",
     "rgb(222, 204, 68)",
@@ -20,7 +20,7 @@ let colors = [
     "rgb(255, 255, 255)",
     "rgb(126, 126, 126)",
     "rgb(0, 0, 0)",
-];
+];*/
 
 var mode = 'pen';
 
